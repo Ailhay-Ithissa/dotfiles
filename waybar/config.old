@@ -1,0 +1,60 @@
+{
+  "position": "top",
+  "height": 24, 
+  "modules-left": ["sway/workspaces", "pulseaudio", "mpris"],
+  "modules-center": ["clock"],
+  "modules-right": ["tray", "custom/notifications"],
+
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:<span font='12'></span> %A, %b %d  -  <span font='12'></span> %H:%M}"
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% <span font='12'>{icon}</span>",
+    "format-muted": "🔇",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "tray": {
+    "icon-size": 17,
+    "spacing": 3,
+  },
+
+  "custom/notifications": {
+    "tooltip": false,
+    "format": "<span font='12'>{icon}</span>",
+    "format-icons": {
+      "notification": "",
+      "none": "",
+      "dnd-notification": "",
+      "dnd-none": "",
+      "inhibited-notification": "",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+    "mpris": {
+        "format": " {status_icon} {artist} - {title}",
+        "max-length": 40,
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "status-icons": {
+            "paused": "",
+            "playing": "",
+            "stopped": ""
+        },
+        // "ignored-players": ["firefox"],
+    },
+}

@@ -1,0 +1,8 @@
+show=drun
+width=25%
+height=25%
+prompt=
+layer=overlay
+gtk_dark=true
+insensitive=true
+content_halign=center

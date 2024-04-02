@@ -1,0 +1,39 @@
+window {
+  border-radius: 24px;
+  border: 3px solid #87c6da;
+  font-family: Roboto Mono;
+  font-size: 16px;
+  background-color: #184956;
+  color: #184956;
+}
+
+#outer-box {
+  padding: 30px;
+}
+
+#input {
+  margin: 15px;
+  padding-left: 15px;
+  border: none;
+  color: #FFFFFF;
+  background-color: #2b869e;
+}
+
+#input image {
+  color: #2b869e;
+}
+
+#scroll {
+  color: #2b869e;
+}
+
+#entry:selected {
+  background: #2b869e;
+  color: #262626;
+  font-weight: normal;
+}
+
+#text:selected {
+  background: #2b869e;
+  color: #FFFFFF;
+}
